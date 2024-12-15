@@ -8,3 +8,9 @@ app.get("/users", (req , res) => {
 });
 
 app.listen(5000);
+
+app.get("/users/:name", (req , res) => {
+    let users = req.params.name;
+    console.log("Users", users);
+    res.status(200).json({message:users})
+});
